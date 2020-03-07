@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+    web1:
+        build: ./web/100
+        restart: always
+        networks:
+            - default
+        ports:
+            - "1886:80"
+    web2:
+        build: ./web/100_2
+        restart: always
+        networks:
+            - default
+        ports:
+            - "1887:80"
+    web3:
+        build: ./web/200
+        restart: always
+        networks:
+            - default
+        ports:
+            - "1888:80"
+    web4:
+        build: ./web/200_2
+        restart: always
+        networks:
+            - default
+        ports:
+            - "1889:80"
+    web5:
+        build: ./web/hard
+        restart: always
+        networks:
+            - default
+        ports:
+            - "1890:80"

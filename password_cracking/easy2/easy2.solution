@@ -1,0 +1,2 @@
+hashcat -a 0 -m 1700 da4f0607c0c43e016e14c0d561a424fa2321f78a266883510270a6416c5ef91dd1c44406704484c8ac04753e3e4f5fea4ffb82ee5e32666be146d1082d3c3bbb '/usr/share/wordlists/rockyou.txt' --force
+

@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+    pwn1:
+        build: ./pwn/pwn1
+        networks:
+            - default
+        ports:
+            - "9000:9000"
+    pwn2:
+        build: ./pwn/pwn2
+        networks:
+            - default
+        ports:
+            - "9001:9001"
+    pwn3:
+        build: ./pwn/pwn3
+        networks:
+            - default
+        ports:
+            - "9002:9002"
+    pwn4:
+        build: ./pwn/pwn4
+        networks:
+            - default
+        ports:
+            - "9003:9003"
+    pwn5:
+        build: ./pwn/pwn5
+        networks:
+            - default
+        ports:
+            - "9004:9004"
+

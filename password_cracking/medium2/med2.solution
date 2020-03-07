@@ -1,0 +1,7 @@
+Use cewl to make dictionary of fish:
+cewl -d 0 -w fish.dict https://en.wikipedia.org/wiki/List_of_fish_common_names
+
+Use fcrackzip dictionary attack:
+fcrackzip -D -p fish.dict -u -v crackme.zip
+
+Flag is then located in flag.txt

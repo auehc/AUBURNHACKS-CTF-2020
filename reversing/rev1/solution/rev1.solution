@@ -1,0 +1,3 @@
+First open rev1 in IDA or another disassembler. 
+After loading locating main, in main one can see a reference to FLAG_2. 
+If you jump to where FLAG_2 is stored in the ELF file you will see the rest of the flag stored. 

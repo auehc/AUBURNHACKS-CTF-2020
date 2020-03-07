@@ -1,0 +1,3 @@
+service mysql start && mysql -uroot -e "CREATE DATABASE SqliDB; CREATE USER 'sqli-user'@'localhost' IDENTIFIED BY 'AndThatDudeBryceBrown'; GRANT ALL PRIVILEGES ON SqliDB.* TO 'sqli-user'@'localhost'; USE SqliDB; CREATE TABLE login(User varchar(20), Password varchar(100)); INSERT INTO login (User, Password) VALUES ('admin', 'ultramanwasthefirstpowerranger'); INSERT INTO login (User, Password) VALUES ('aubie',{va1iDa73_ur_1Npu7}'); SET PASSWORD FOR root@'localhost' = PASSWORD('thisisareallylongpassword')";
+
+apache2 -D FOREGROUND

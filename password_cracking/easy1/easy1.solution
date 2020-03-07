@@ -1,0 +1,1 @@
+hashcat -a 0 easy1.hash /usr/share/wordlists/rockyou.txt --force

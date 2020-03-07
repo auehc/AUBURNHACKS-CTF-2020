@@ -1,0 +1,18 @@
+Given our prompt it looks like we need to produce a buffer overflow. If we look in IDA at the strings subview we can see a reference to flag.txt located in sigsegv_handler.
+
+So our goal is to call sigsegv_handler. Looking in main we can see the function pointer for sigsegv_handler is passed to signal along with SIGSEGV. 
+sigsegv_handler will then be called when a seg fault is called. 
+
+So now we need to find a way to cause a buffer overflow. Looking at the functions used by this binary we see strcpy is used. This function is known to be vulnerable.
+We see that strcpy takes in a source buffer and a destination buffer. The destination buffer is of size 256 (0x100). However, the source buffer is of size 1024 (0x400). 
+However overloading the destination buffer will not always be enough to produce a segfault! To produce a segfault we need the OS to try to access some memory that is restricted.
+
+We can trigger this by overwritting the return value on the stack with a value that cannot be accessed in memory. 
+
+So if we overwrite the buffer and then any other local variables in the function, plus the saved EBP on the stack and then the saved return value we should produce a segfault.
+
+It looks like at the beginning of vuln ESP is subtracted by 0x104. Therefore we need to send in 0x104 characters plus 0x4 for the saved EBP and another 0x4 for the return value.
+
+Therefore we need to send in 0x10C. 
+
+`python -c "print 'a'*0x10c" | ./pwn1`

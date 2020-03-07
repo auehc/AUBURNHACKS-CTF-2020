@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+    rev2:
+        build: ./reversing/rev2
+        networks:
+            - default
+        ports:
+            - "9021:9021"
+    rev3:
+        build: ./reversing/rev3
+        networks:
+            - default
+        ports:
+            - "9022:9022"
+    rev4:
+        build: ./reversing/rev4
+        networks:
+            - default
+        ports:
+            - "9023:9023"
+    rev5:
+        build: ./reversing/rev5
+        networks:
+            - default
+        ports:
+            - "9024:9024"
+

@@ -1,0 +1,11 @@
+Create initial dictionary list using cewl:
+cewl -d 0 -w joe.list https://en.wikipedia.org/wiki/Joe_Rogan
+
+Using Mentalist: 
+Append previously generated dictionary to itself
+Substitute letters for l33t speak values
+Append special characters
+
+Use hashcat with final dictionary:
+hashcat -a 0 joe.hash joe.dict --force
+

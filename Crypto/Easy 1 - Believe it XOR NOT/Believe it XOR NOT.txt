@@ -1,0 +1,30 @@
+Topic:
+    Cryptography
+    
+Difficulty:
+    Easy
+    
+Description:
+    nc [ip_addr] [port]
+    
+    On remote host:
+        You intercepted a 'secret' key used to encrypt the following message.
+        What did the sender of the encrypted message say?
+        
+        Ciphertext:
+        [ciphertext]
+        Message:
+        [user_input]
+    
+Solution:
+    The ciphertext is created using the following formula:
+        1. Each character is converted to it's binary equivalent
+        2. Each bit within the characters binary equivalent is flipped. i.e, 0->1 and 1->0.
+        3. The flipped chunk is then XORed with a given value
+        4. Each chunk is then converted to its ASCII equivalent
+        
+    The plaintext is created using the following formula:
+        1. Each character of the ciphertext is converted to binary
+        2. Each binary chunk is XORed with a given value.
+        3. Every bit of the XORed chunk is flipped
+        4. Every chunk is converted to its ASCII equivalent.
