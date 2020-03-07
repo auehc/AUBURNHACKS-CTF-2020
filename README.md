@@ -2,72 +2,36 @@
 
 ## Categories
 
-### Crypto: Ethan
+### Crypto: 
 
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
+### Bash: 
 
-### Bash: Ethan
+```bash
+docker-compose -f bash-compose.yml build
+docker-compose -f bash-compose.yml up -d
+```
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Reversing: Jordan
-
-* [x]  Hidden Flag - C
-* [x]  Easy Crackme - C
-* [x]  Medium Crackme - ASM
-* [x]  Medium Crackme - Java
-* [x]  Hard Crackme - C
+### Reversing: 
 
 ```bash
 docker-compose -f reverse-compose.yml build
 docker-compose -f reverse-compose.yml up -d
 ```
 
-### Pwn: Jordan
+### Pwn:
 
-* [x]  Simple Buffer Overflow
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
+```bash
+docker-compose -f pwn-compose.yml build
+docker-compose -f pwn-compose.yml up -d
+```
 
-### Web: DeMarcus
+### Web: 
 
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
+```bash
+docker-compose -f web-compose.yml build
+docker-compose -f web-compose.yml up -d
+```
 
-### Forensics: DeMarcus
+### Password Cracking
 
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
-
-### Password Cracking: Zach
-
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
-
-### Physical: Charlie
-
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
-* [x]  Hard
+### Physical
